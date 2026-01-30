@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMS</title>
+  </head>
+  <body>
+    <h1>Course Registration Form</h1>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <table>
+          <tr>
+            <td><label for="fn">First Name</label></td>
+            <td>
+              <input
+                type="text"
+                id="fn"
+                name="FN"
+                placeholder="Ex: Harshit"
+                size="15"
+                maxlength="10"
+                required
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="ln">Surname</label></td>
+            <td>
+              <input
+                type="text"
+                id="ln"
+                name="LN"
+                placeholder="Ex: T"
+                size="15"
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mob">Mobile Number</label></td>
+            <td>
+              <input
+                type="tel"
+                id="mob"
+                name="mob"
+                placeholder="Ex: 987-897-0987"
+                size="15"
+                pattern="[0-9]{10}"
+                title="Enter 10 digit mobile number"
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mail">Email</label></td>
+            <td>
+              <input
+                type="email"
+                id="mail"
+                name="mail"
+                size="15"
+                placeholder="Ex: rohit@gmail.com"
+                required
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pwd">Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="pwd"
+                name="pwd"
+                placeholder="min 5 characters"
+                size="15"
+                minlength="5"
+                maxlength="20"
+                required
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="cpwd">Confirm Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="cpwd"
+                name="cpwd"
+                placeholder="min 5 characters"
+                size="15"
+                minlength="5"
+                required
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">DOB</label></td>
+            <td>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                min="1950-01-01"
+                max="2010-12-31"
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Gender</label></td>
+            <td>
+              <input type="radio" id="male" name="gender" value="M" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="F" />
+              <label for="female">Female</label>
+              <input type="radio" id="custom" name="gender" value="C" />
+              <label for="custom">Custom</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="country">Select Country</label></td>
+            <td>
+              <select id="country" name="Country">
+                <option value="" disabled selected>-- Select --</option>
+                <option value="INDIA">INDIA</option>
+                <option value="USA">USA</option>
+                <option value="China">China</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option></select
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pic">Upload Picture</label></td>
+            <td>
+              <input type="file" id="pic" name="pic" accept="image/*" /><br />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>Course Details</legend>
+        <table>
+          <tr>
+            <td><label for="course">Select Course</label></td>
+            <td>
+              <select id="course" name="Course">
+                <option value="" disabled selected>-- Select Course --</option>
+                <option value="PFS">Python Full Stack</option>
+                <option value="JFS">Java Full Stack</option>
+                <option value="CJ">MERN STACK</option>
+                <option value="PDS">Python for DataScience</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Delivery Mode</label></td>
+            <td>
+              <input type="checkbox" id="online" name="mode" value="ON" />
+              <label for="online">ONLINE</label>
+              <input type="checkbox" id="offline" name="mode" value="OFF" />
+              <label for="offline">OFFLINE</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="comments">Comments</label></td>
+            <td>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="4"
+                cols="40"
+                placeholder="Enter any additional comments..."
+                maxlength="500"
+              ></textarea>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <!-- ===== ADDITIONAL INPUT TYPES FOR TEACHING ===== -->
+      <fieldset>
+        <legend>Additional Input Types (For Teaching)</legend>
+        <table>
+          <!-- URL Input -->
+          <tr>
+            <td><label for="website">Website URL</label></td>
+            <td>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                placeholder="https://example.com"
+                size="25"
+              />
+            </td>
+          </tr>
+          <!-- Search Input -->
+          <tr>
+            <td><label for="search">Search</label></td>
+            <td>
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search..."
+                size="25"
+              />
+            </td>
+          </tr>
+          <!-- Number Input -->
+          <tr>
+            <td><label for="age">Age (number)</label></td>
+            <td>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                min="18"
+                max="60"
+                step="1"
+                value="25"
+              />
+            </td>
+          </tr>
+          <!-- Range Input -->
+          <tr>
+            <td><label for="experience">Experience Level (range)</label></td>
+            <td>
+              <input
+                type="range"
+                id="experience"
+                name="experience"
+                min="0"
+                max="10"
+                step="1"
+                value="5"
+              />
+              0-10
+            </td>
+          </tr>
+          <!-- Time Input -->
+          <tr>
+            <td><label for="preferred-time">Preferred Time</label></td>
+            <td>
+              <input type="time" id="preferred-time" name="preferred-time" />
+            </td>
+          </tr>
+          <!-- Datetime-local Input -->
+          <tr>
+            <td><label for="interview">Interview Date & Time</label></td>
+            <td>
+              <input type="datetime-local" id="interview" name="interview" />
+            </td>
+          </tr>
+          <!-- Month Input -->
+          <tr>
+            <td><label for="start-month">Preferred Start Month</label></td>
+            <td>
+              <input type="month" id="start-month" name="start-month" />
+            </td>
+          </tr>
+          <!-- Week Input -->
+          <tr>
+            <td><label for="week">Preferred Week</label></td>
+            <td>
+              <input type="week" id="week" name="week" />
+            </td>
+          </tr>
+          <!-- Color Input -->
+          <tr>
+            <td><label for="fav-color">Favorite Color</label></td>
+            <td>
+              <input
+                type="color"
+                id="fav-color"
+                name="fav-color"
+                value="#3498db"
+              />
+            </td>
+          </tr>
+          <!-- Hidden Input -->
+          <tr>
+            <td><label>Hidden Field</label></td>
+            <td>
+              <input type="hidden" name="form-id" value="COURSE-REG-2026" />
+              <code>(hidden: form-id="COURSE-REG-2026")</code>
+            </td>
+          </tr>
+          <!-- Datalist -->
+          <tr>
+            <td><label for="skill">Primary Skill (datalist)</label></td>
+            <td>
+              <input
+                list="skills-list"
+                id="skill"
+                name="skill"
+                placeholder="Type to search..."
+              />
+              <datalist id="skills-list">
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="JavaScript"></option>
+                <option value="Python"></option>
+                <option value="Java"></option>
+                <option value="React"></option>
+                <option value="Node.js"></option>
+              </datalist>
+            </td>
+          </tr>
+          <!-- Select with Optgroup -->
+          <tr>
+            <td>
+              <label for="specialization">Specialization (optgroup)</label>
+            </td>
+            <td>
+              <select id="specialization" name="specialization">
+                <option value="" disabled selected>-- Select --</option>
+                <optgroup label="Frontend">
+                  <option value="react">React</option>
+                  <option value="angular">Angular</option>
+                  <option value="vue">Vue.js</option>
+                </optgroup>
+                <optgroup label="Backend">
+                  <option value="node">Node.js</option>
+                  <option value="django">Django</option>
+                  <option value="spring">Spring Boot</option>
+                </optgroup>
+                <optgroup label="Database">
+                  <option value="mysql">MySQL</option>
+                  <option value="mongodb">MongoDB</option>
+                  <option value="postgres">PostgreSQL</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+          <!-- Select Multiple -->
+          <tr>
+            <td><label for="hobbies">Hobbies (multiple select)</label></td>
+            <td>
+              <select id="hobbies" name="hobbies" multiple size="4">
+                <option value="reading">Reading</option>
+                <option value="coding">Coding</option>
+                <option value="gaming">Gaming</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+              </select>
+              <br /><small>(Hold Ctrl/Cmd to select multiple)</small>
+            </td>
+          </tr>
+          <!-- Multiple File Upload -->
+          <tr>
+            <td><label for="documents">Documents (multiple files)</label></td>
+            <td>
+              <input
+                type="file"
+                id="documents"
+                name="documents"
+                accept=".pdf,.doc,.docx"
+                multiple
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <!-- ===== ATTRIBUTES DEMO ===== -->
+      <fieldset>
+        <legend>Important Attributes Demo</legend>
+        <table>
+          <tr>
+            <td><label for="readonly-demo">readonly</label></td>
+            <td>
+              <input
+                type="text"
+                id="readonly-demo"
+                value="Cannot edit this"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="disabled-demo">disabled</label></td>
+            <td>
+              <input
+                type="text"
+                id="disabled-demo"
+                value="Disabled field"
+                disabled
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="autofocus-demo">autofocus</label></td>
+            <td>
+              <input
+                type="text"
+                id="autofocus-demo"
+                placeholder="Gets focus on page load"
+              />
+              <!-- autofocus removed to not interfere with other fields -->
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pattern-demo">pattern (letters only)</label></td>
+            <td>
+              <input
+                type="text"
+                id="pattern-demo"
+                pattern="[A-Za-z]+"
+                title="Only letters A-Z allowed"
+                placeholder="Only A-Z"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <!-- ===== OUTPUT ELEMENTS ===== -->
+      <fieldset>
+        <legend>Output Elements</legend>
+        <table>
+          <tr>
+            <td><label for="output-demo">output</label></td>
+            <td>
+              <output id="output-demo" name="result"
+                >Result appears here</output
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><label for="progress-demo">progress (70%)</label></td>
+            <td>
+              <progress id="progress-demo" value="70" max="100">70%</progress>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="meter-demo">meter (60%)</label></td>
+            <td>
+              <meter
+                id="meter-demo"
+                value="0.6"
+                min="0"
+                max="1"
+                low="0.3"
+                high="0.7"
+                optimum="0.5"
+              >
+                60%
+              </meter>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <!-- ===== BUTTON TYPES ===== -->
+      <fieldset>
+        <legend>Button Types</legend>
+        <table>
+          <tr>
+            <td>input type="submit"</td>
+            <td><input type="submit" value="Submit Form" /></td>
+          </tr>
+          <tr>
+            <td>input type="reset"</td>
+            <td><input type="reset" value="Reset Form" /></td>
+          </tr>
+          <tr>
+            <td>input type="button"</td>
+            <td>
+              <input
+                type="button"
+                value="Click Me!"
+                onclick="alert('Button clicked!')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>input type="image"</td>
+            <td>
+              <input
+                type="image"
+                src="https://cdn-icons-png.flaticon.com/24/1828/1828884.png"
+                alt="Submit"
+                width="24"
+                height="24"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;button&gt; element</td>
+            <td><button type="button">🎉 Button Element</button></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+      <hr />
+
+      <p>
+        <input type="submit" value="📤 Submit Registration" />
+        &nbsp;&nbsp;
+        <input type="reset" value="🔄 Reset All" />
+      </p>
+    </form>
+  </body>
+</html>
