@@ -1,0 +1,88 @@
+  body {
+      font-family: Arial;
+      margin: 0;
+      background: #f4f4f4;
+      scroll-behavior: smooth;
+  }
+
+  header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+  }
+
+  nav a {
+      color: white;
+      margin: 15px;
+      text-decoration: none;
+      font-weight: bold;
+  }
+
+  nav a:hover {
+      color: yellow;
+  }
+
+  section {
+      padding: 50px;
+      margin: 20px;
+      background: white;
+      border-radius: 10px;
+      transition: transform 0.3s;
+  }
+
+  section:hover {
+      transform: scale(1.02);
+  }
+
+  h2 {
+      color: #333;
+  }
+
+  .skills span {
+      display: inline-block;
+      background: #007bff;
+      color: white;
+      padding: 8px 15px;
+      margin: 6px;
+      border-radius: 20px;
+      transition: background 0.3s;
+  }
+
+  .skills span:hover {
+      background: #0056b3;
+  }
+
+  .project {
+      padding: 15px;
+      border-left: 5px solid #007bff;
+      margin-bottom: 15px;
+      background: #f9f9f9;
+      transition: background 0.3s;
+  }
+
+  .project:hover {
+      background: #e6f0ff;
+  }
+
+  .project a {
+      display: inline-block;
+      margin-top: 8px;
+      text-decoration: none;
+      color: white;
+      background: #007bff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s;
+  }
+
+  .project a:hover {
+      background: #0056b3;
+  }
+
+  footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+  }
